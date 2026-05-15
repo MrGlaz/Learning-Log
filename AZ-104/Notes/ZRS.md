@@ -1,0 +1,1 @@
+**ZRS (Zone-Redundant Storage) :** Tes données sont réparties sur 3 datacenters (Zones) d'une **même région**. Si un bâtiment tombe, les deux autres prennent le relais.

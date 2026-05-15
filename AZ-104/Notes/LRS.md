@@ -1,0 +1,1 @@
+**LRS (Locally Redundant Storage) :** Tes données sont triplées dans **un seul datacenter**. Si le bâtiment brûle, les données sont perdues.

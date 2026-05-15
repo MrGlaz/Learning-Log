@@ -1,0 +1,1 @@
+**GRS (Geo-Redundant Storage) :** Tes données sont triplées dans ta région "A" (localisation principale), puis copiées de nouveau dans la région "B".
