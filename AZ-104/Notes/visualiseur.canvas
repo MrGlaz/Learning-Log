@@ -1,7 +1,0 @@
-{
-	"nodes":[
-		{"id":"deb309ad42bbba87","x":-179,"y":128,"width":250,"height":60,"type":"text","text":"Virtual Machine Scale Set"},
-		{"id":"1ab18f7c269a63b6","x":-195,"y":-92,"width":250,"height":60,"type":"text","text":"Load Balancer"}
-	],
-	"edges":[]
-}

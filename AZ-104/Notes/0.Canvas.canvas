@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"6de47c66a2c78d87","x":-80,"y":-920,"width":820,"height":300,"type":"group","label":"Gouvernance & Identité"},
+		{"id":"febb3959ad6aaef5","type":"group","x":-540,"y":-360,"width":819,"height":267,"label":"Hub VNet"},
+		{"id":"deb309ad42bbba87","type":"text","text":"Virtual Machine Scale Set","x":-179,"y":128,"width":250,"height":60},
+		{"id":"7bf41b2d23e2b8b7","type":"text","text":"Admin_User","x":-362,"y":387,"width":250,"height":60},
+		{"id":"778a5690dbd0c1de","type":"text","text":"Resource_Group","x":140,"y":260,"width":250,"height":60},
+		{"id":"9efc889dd3051483","type":"text","text":"Management Group","x":645,"y":-310,"width":250,"height":60},
+		{"id":"4b7c78240b26bc29","type":"text","text":"RG1","x":520,"y":-61,"width":250,"height":60},
+		{"id":"1ab18f7c269a63b6","type":"text","text":"VNet","x":-500,"y":-310,"width":250,"height":60},
+		{"id":"3b94c85f7be4c832","type":"text","text":"VM","x":-20,"y":-250,"width":250,"height":60},
+		{"id":"4e9adb506d38b906","type":"text","text":"Définitions","x":-840,"y":-560,"width":250,"height":60,"color":"4"},
+		{"id":"00258eb2da98ad57","type":"text","text":"Sécurité","x":-543,"y":-560,"width":250,"height":60,"color":"1"},
+		{"id":"333126c863907a0e","type":"text","text":"Subscription","x":645,"y":-210,"width":250,"height":60},
+		{"id":"17388d870b64eecf","type":"text","text":"RG2","x":770,"y":-61,"width":250,"height":60},
+		{"id":"6ee780fa7230f0fc","x":-35,"y":-880,"width":675,"height":180,"type":"text","text":"- `Objectif AZ-104 : Discipline et Travail` (Ton mindset/règles du jeu).\n    \n- `Entra ID` (Anciennement Azure AD).\n    \n- `RBAC & Subscriptions`."}
+	],
+	"edges":[
+		{"id":"3e63bcf5f28856ab","fromNode":"1ab18f7c269a63b6","fromSide":"right","toNode":"3b94c85f7be4c832","toSide":"left","label":"héberge"},
+		{"id":"90cccc5612333956","fromNode":"7bf41b2d23e2b8b7","fromSide":"right","toNode":"778a5690dbd0c1de","toSide":"left","label":"RBAC : contributor"},
+		{"id":"df75045573e34190","fromNode":"9efc889dd3051483","fromSide":"bottom","toNode":"333126c863907a0e","toSide":"top"},
+		{"id":"4a1f9262ee47eeb5","fromNode":"333126c863907a0e","fromSide":"bottom","toNode":"4b7c78240b26bc29","toSide":"top"},
+		{"id":"64418f3302295587","fromNode":"333126c863907a0e","fromSide":"bottom","toNode":"17388d870b64eecf","toSide":"top"}
+	]
+}

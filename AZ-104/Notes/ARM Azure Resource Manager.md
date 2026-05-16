@@ -161,6 +161,21 @@ Dans la section outputs de votre modèle ARM, vous pouvez spécifier les valeurs
 
 ### Utiliser des sorties dans un modèle ARM
 
+Exemple de base :
+```
+"outputs": {
+  "<output-name>": {
+    "condition": "<boolean-value-whether-to-output-value>",
+    "type": "<type-of-output-value>",
+    "value": "<output-value-expression>",
+    "copy": {
+      "count": <number-of-iterations>,
+      "input": <values-for-the-variable>
+    }
+  }
+}
+```
+
 Voici un exemple pour produire en sortie les points de terminaison du compte de stockage :
 
 ```
@@ -179,3 +194,9 @@ Notez la partie `reference` de l’expression. Cette fonction obtient l’éta
 Les modèles ARM sont _idempotents_, ce qui signifie que vous pouvez redéployer le modèle dans le même environnement et que, si rien ne change dans le modèle, rien ne change dans l’environnement. 
 Si une modification est apportée au modèle (par exemple, vous modifiez une valeur de paramètre), seule cette modification est déployée.
 Votre modèle peut contenir toutes les ressources dont vous avez besoin pour votre solution Azure et vous pouvez réexécuter sans danger un modèle. Les ressources sont créées seulement si elles n’existent pas déjà et ne sont mises à jour qu’en cas de modification.
+
+Astuces utiles :
+
+* Groupe de ressource > Nom de déploiement (versioning) > Nom de la ressource > valeur de la ressource
+* Pour modifier le nom du déploiement avec l'Azure CLI, ajouter le paramètre --name (ou -n)
+* Par défaut, si pas de --name, Azure utilise le nom du fichier Template comme nom de déploiement.
