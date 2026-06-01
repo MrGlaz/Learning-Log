@@ -1,30 +1,23 @@
-ENTRA ID
-AD
-service d'annuaire managé
-Abonnement Azure inclut un locataire/annuaire par défaut
-Certaines fonctionnalités de gestion d'identités nécessitent des versions payantes de MS Entra ID
+ENTRA ID vs AD DS
+- Entra ID = flat (no OU, no GPO, no LDAP, no Kerberos)
+- Auth: SAML / WS-Fed / OpenID Connect → Authz: OAuth
+- Connexion via REST API over HTTP/HTTPS (not LDAP)
 
-AD DS axé sur applications locales
-Entra ID axé sur gestion identités et app web
-Contrairement à AD DS, Microsoft Entra ID est multilocataire par conception
-Le terme « locataire » représente une instance Microsoft Entra individuelle
-Dans un abonnement Azure, vous pouvez créer plusieurs locataires Microsoft Entra
-À un moment donné, un abonnement Azure doit être associé à un et un seul locataire Microsoft Entra. C'est ce qui permet le RBAC.
-Un seul locataire Microsoft Entra peut prendre en charge plusieurs abonnements Azure.
-Entra ID ne permet pas la gestion matériel via GPO (comme AD ferait)
-L'atout d'Entra ID réside dans la fourniture de services d’annuaire, le stockage et la publication de données utilisateur, d’appareil et d’application, ainsi que la gestion de l’authentification et de l’autorisation des utilisateurs, des appareils et des applications.
-Entra ID n’inclut pas la classe d’unité d’organisation (UO), donc pas d'organisation dans une hiérarchie de conteneurs personnalisés.
+TENANTS & SUBSCRIPTIONS
+- 1 subscription = 1 tenant only (→ RBAC)
+- 1 tenant = multiple subscriptions
+- Multi-tenant by design
 
-Application Object : C'est le modèle global (Unique, dans le tenant d'origine).
-Service Principal : C'est l'identité locale pour l'exécution (Une par tenant où l'application est utilisée).
+OBJECTS
+- **Application Object** = global template (1 only, home tenant) **(the blueprint)**
+- **Service Principal** = local identity (1 per tenant where app is used) **(usage of blueprint)**
 
-ActiveDirectory =
-Active Direct Domain Services (AD DS) 
-Active Directory Certificate Services (AD CS)
-Active Directory Lightweight Directory Services (AD LDS)
-Active Directory Federation Services (AD FS)
-Active Directory Rights Management Services (AD RMS)
+## Licenses
 
-Les utilisateurs et les groupes Microsoft Entra sont créés dans une structure plate, et il n’existe pas d’unités d’organisation ni d’objets de stratégie de groupe.
-Vous ne pouvez pas interroger Microsoft Entra ID en utilisant LDAP ; au lieu de cela, Microsoft Entra ID utilise l’API REST sur HTTP et HTTPS.
-Microsoft Entra ID n’utilise pas l’authentification Kerberos ; au lieu de cela, il utilise des protocoles HTTP et HTTPS comme SAML, WS-Federation et OpenID Connect pour l’authentification, et OAuth pour l’autorisation.
+| License  | For what                           | Key features                                                                                                                                                                                                  |
+| -------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Free** | Included with any Azure / M365 sub | Users & groups, unlimited SSO for MS Cloud apps, Security Defaults (basic MFA via Authenticator), basic B2B                                                                                                   |
+| **P1**   | Hybrid + advanced security         | Everything in Free + **Conditional Access**, **SSPR** (cloud + writeback to on-prem AD), **dynamic groups**, **Administrative Units**, advanced **Entra Connect / Cloud Sync** (password writeback), full MFA |
+| **P2**   | Identity Protection + Governance   | Everything in P1 + **Identity Protection** (risk-based policies), **PIM** (Privileged Identity Management), **Access Reviews**                                                                                |
+
+> AZ-104 note: mainly remember **what requires P1** (dynamic groups, AU, Conditional Access, SSPR). This is the most frequent trap.

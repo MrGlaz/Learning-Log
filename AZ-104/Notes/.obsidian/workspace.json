@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARM Azure Resource Manager.md",
+                "file": "Entra ID.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ARM Azure Resource Manager"
+              "title": "Entra ID"
             }
           }
         ],
@@ -200,6 +200,7 @@
   },
   "active": "18abd49d60da9b0f",
   "lastOpenFiles": [
+    "Notes de départ.md",
     "Entra ID.md",
     "ARM Azure Resource Manager.md",
     "0.Canvas.canvas",
@@ -229,7 +230,6 @@
     "Storage Account.md",
     "AKS.md",
     "Blob Storage.md",
-    "Management Groups.md",
     "AWS/storage.jpg",
     "AWS/networking.jpg",
     "AWS/Non confirmé 981019.crdownload",

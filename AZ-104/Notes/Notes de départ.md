@@ -1,5 +1,7 @@
 [[AZ104]]
 
+Exam signal: whenever you see "unlike", "as opposed to", "cannot", "only one" → an exam question is coming.
+
 **Le Pourquoi avant le Comment**
 Pour chaque service (ex: Azure Bastion), noter le cas d'usage (à utiliser quand on veut du RDP/SSH sans exposer d'IP publique)
 puis la définition
