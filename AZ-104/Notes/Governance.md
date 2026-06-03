@@ -87,7 +87,7 @@ Some Microsoft Online products are _add-ons_. Add-ons require a prerequisite se
 - Add members (users / groups / devices) → then `Roles and administrators` at the AU scope to delegate.
 - **Restricted Management AU**: option to check at creation. *Effect*: even a Global Admin CANNOT modify the AU's objects without an explicitly assigned role on it → protects break-glass / VIP accounts. *Irreversible* = once the box is checked at creation, **you can no longer uncheck it**. To undo, delete the AU and recreate it non-restricted (loss of config). Think carefully first.
 
-#### App Registration
+#### App Registration (classic trap)
 - `Entra > App registrations > New registration`
 - Options to know:
   - **Supported account types**: single tenant (just your company) / multi-tenant (any Entra company) / multi-tenant + personal (expands to personal hotmail/outlook.com accounts)
@@ -107,3 +107,8 @@ Some Microsoft Online products are _add-ons_. Add-ons require a prerequisite se
   az login --identity                      # SA
   az login --identity --username <client-id-UA>   # UA
   ```
+
+#### Administrative Unit
+- `Entra > Roles & admins > Administrative units > Add`
+- Add members (users / groups / devices) → then `Roles and administrators` at the AU scope to delegate.
+- **Restricted Management AU**: option to check at creation. *Effect*: even a Global Admin CANNOT modify the AU's objects without an explicitly assigned role on it → protects break-glass / VIP accounts. *Irreversible* = once the box is checked at creation, **you can no longer uncheck it**. To undo, delete the AU and recreate it non-restricted (loss of config). Think carefully first.
