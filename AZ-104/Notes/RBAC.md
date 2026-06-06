@@ -25,3 +25,8 @@
 * **Deny Assignments:** Standard RBAC is exclusively additive (it only grants permissions). You **cannot** manually create a "Deny" rule. Deny Assignments exist in Azure but are applied exclusively by the system (e.g., Azure Blueprints or Managed Applications).
 * **Root Management Group Elevation:** An Entra ID Global Administrator does **not** have access to Azure Subscriptions by default. They must explicitly toggle "Access management for Azure resources" in the portal to grant themselves the `User Access Administrator` role at the Root Management Group level.
 * **The Assignment Limit:** There is a strict platform limit of **4,000** RBAC assignments per subscription. Best practice is to assign roles to **Groups**, never directly to individual users.
+
+
+
+### PIM (Privileged Identity Management) - P2
+Just-in-Time (eligible), Just-Enough for a limited period of time
