@@ -13,6 +13,8 @@
   * `Owner`: Full access to all resources, including the ability to delegate access to others (assign RBAC).
   * `Contributor`: Can create and manage all types of Azure resources, but **cannot** grant access to others.
   * `Reader`: Can view existing Azure resources but cannot create, modify, or delete them.
+  * `User Access Administrator` : Lets you manage user access to Azure resources (Global admin does not have this by default. Must be addedat the Root Management Group level.)
+  * 
 * **Custom Roles:** Created using JSON if built-in roles do not match specific security needs.
   * Must specify `Actions` (allowed operations), `NotActions` (subtracted operations), and `AssignableScopes` (where the role can be used).
 
@@ -22,8 +24,7 @@
   * *Crucial Note:* Being a `Contributor` on a storage account does **not** grant data-plane access to read the files inside by default. You need specific roles like `Storage Blob Data Contributor`.
 
 ### 4. Exam Pitfalls & Nuances (AZ-104)
-* **Deny Assignments:** Standard RBAC is exclusively additive (it only grants permissions). You **cannot** manually create a "Deny" rule. Deny Assignments exist in Azure but are applied exclusively by the system (e.g., Azure Blueprints or Managed Applications).
-* **Root Management Group Elevation:** An Entra ID Global Administrator does **not** have access to Azure Subscriptions by default. They must explicitly toggle "Access management for Azure resources" in the portal to grant themselves the `User Access Administrator` role at the Root Management Group level.
+* **Deny Assignments:** `NotActions` Standard RBAC is exclusively additive (it only grants permissions). You **cannot** manually create a "Deny" rule. Deny Assignments exist in Azure but are applied exclusively by the system (e.g., Azure Blueprints or Managed Applications).
 * **The Assignment Limit:** There is a strict platform limit of **4,000** RBAC assignments per subscription. Best practice is to assign roles to **Groups**, never directly to individual users.
 
 
