@@ -1,4 +1,11 @@
 
+1 subscription -> 1 directory
+1 directory -> n subscriptions
+ Microsoft Entra Directory   <--- L'unique source d'identités (Users/Groups)
+         │                │
+        ▼               ▼
+   Subscription 1     Subscription 2   <--- Font confiance à cet annuaire
+
 ## 📄 Azure Role-Based Access Control (RBAC)
 
 ### 1. Core Concepts & Architecture
