@@ -22,7 +22,7 @@
   * `Reader`: Can view existing Azure resources but cannot create, modify, or delete them.
   * `User Access Administrator` : Lets you manage user access to Azure resources (Global admin does not have this by default. Must be addedat the Root Management Group level.)
   * 
-* **Custom Roles:** Created using JSON if built-in roles do not match specific security needs.
+* **Custom Roles:** Created using JSON if built-in roles do not match specific security needs (on RG or MG)
   * Must specify `Actions` (allowed operations), `NotActions` (subtracted operations), and `AssignableScopes` (where the role can be used).
 
 ### 3. Data Plane vs. Control Plane
