@@ -1,5 +1,6 @@
 
 Move resources between RG / Sub / Region.
+Move resources between RG / Sub / Region.
 
 | Move | Doable? | Note |
 |---|---|---|
